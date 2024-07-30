@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-primary panel-typing">
+            <div class="heading">
+                <img src="tri-thuc.jpg" alt="logo hieu tao"/>
+                <h2> Speed Finger </h2>
+            </div>
+            <div class="body-game">
+                <div class="itemGame" id="itemGame"></div>
+                <div class="row">
+                    <div class="khung-nhap">
+                        <label>Input</label><br />
+                        <input class="InputText" placeholder="enter text" id="typingInput">
+                    </div>
+                    <div class="countdown-label">
+                        <label>Time</label><br />
+                        <button class="countdown-time" id="timeButton">
+                            <p id="Countdown">60</p>
+                        </button>
+                    </div>
+                    
+                <div class="point-power">
+                    <div class="right-wrong">
+                        <label style="color: green;">Correct</label><br />
+                        <p id="wordCorrect">0</p>
+                    </div>
+                    <div class="right-wrong">
+                        <label style="color: red;">Wrong</label><br />
+                        <p id="wordWrong">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio id="myAudio" src="your_audio_file.mp3" autoplay></audio>
+        <button onclick="playAudio()">Play</button>
+        <button onclick="pauseAudio()">Pause</button>
+        <script>
+            var audio = document.getElementById("myAudio");
+        
+            function playAudio() {
+                audio.play();
+            }
+        
+            function pauseAudio() {
+                audio.pause();
+            }
+        </script>
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
