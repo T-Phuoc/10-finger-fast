@@ -1,11 +1,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const typingInput = document.getElementById('typingInput');
-    const itemGame = document.getElementById('itemGame');
-    const Countdown = document.getElementById('Countdown');
+    const itemCharacter = document.getElementById('itemCharacter');
+    const showTime = document.getElementById('showTime');
     const wordCorrect = document.getElementById('wordCorrect');
     const wordWrong = document.getElementById('wordWrong');
-
+    
     let array = [
         "One", "beautiful","day", "I", "walked", "to" ,"the" ,"riverbank" ,"near" ,"my" ,"house", "with" ,"my" ,"fishing",
         "gear" ,"and" ,"found" ,"a" ,"nice" ,"place" ,"to" ,"fish." ,"However," ,"I" ,"caught" ,"a" ,"crocodile," ,"but" ,
@@ -21,17 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let timeCount = false;
     let timer;
 
-    var audio = document.getElementById("myAudio");
-
     function updateDisplay() {
-        itemGame.innerHTML = '';
+        itemCharacter.innerHTML = '';
         array.forEach((word, index) => {
             let span = document.createElement('span');
             span.textContent = word + ' ';
             if (index === currentWord) {
                 span.classList.add('highlight');
             }
-            itemGame.appendChild(span);
+            itemCharacter.appendChild(span);
         });
     }
 
