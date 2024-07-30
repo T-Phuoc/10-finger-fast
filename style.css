@@ -174,3 +174,13 @@ input.form-control {
     align-items: center;
     flex-direction: column;
 }
+
+
+.click-play {
+  width: 50px;
+  height: 25px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  color: rgb(1, 1, 1);
+}
